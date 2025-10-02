@@ -56,4 +56,4 @@ spec:
         - name: "MESSAGE"
           value: "Hello From backend (v2)!"
         - name: "UPSTREAM_URIS"
-          value: "http://neo4j-db-v1:7474"
+          value: "https://httpbin.org/"
