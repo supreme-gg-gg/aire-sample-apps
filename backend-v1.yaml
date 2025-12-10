@@ -7,7 +7,7 @@ metadata:
     app: backend
 spec:
   ports:
-  - port: 8080
+  - port: 8081
     protocol: TCP
     targetPort: 8081
   selector:
@@ -40,7 +40,7 @@ spec:
         image: nicholasjackson/fake-service:v0.26.2
         ports:
           - name: http
-            containerPort: 8080
+            containerPort: 8081
             protocol: TCP
         livenessProbe:
           tcpSocket:
@@ -50,7 +50,7 @@ spec:
             port: http
         env:
         - name: "LISTEN_ADDR"
-          value: "0.0.0.0:8080"
+          value: "0.0.0.0:8081"
         - name: "NAME"
           value: "backend-v1"
         - name: "MESSAGE"
